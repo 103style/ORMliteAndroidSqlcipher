@@ -23,7 +23,7 @@ android {
 
     repositories {
         flatDir {
-            dirs 'libs','../ormlite/libs'
+            dirs 'libs','../library/libs'
         }
     }
 }
