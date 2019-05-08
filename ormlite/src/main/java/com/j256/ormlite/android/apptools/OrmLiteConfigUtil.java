@@ -1,5 +1,7 @@
 package com.j256.ormlite.android.apptools;
 
+import android.content.Context;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -28,6 +30,8 @@ import com.j256.ormlite.table.DatabaseTable;
 import com.j256.ormlite.table.DatabaseTableConfig;
 import com.j256.ormlite.table.DatabaseTableConfigLoader;
 
+import net.sqlcipher.database.SQLiteDatabase;
+
 /**
  * Database configuration file helper class that is used to write a configuration file into the raw resource
  * sub-directory to speed up DAO creation. If run from main, it takes an optional "-s" argument which turns on sorting
@@ -44,7 +48,7 @@ import com.j256.ormlite.table.DatabaseTableConfigLoader;
  * I added this utility class which writes a configuration file into the raw resource "res/raw" directory inside of your
  * project containing the table and field names and associated details. This file can then be loaded into the
  * {@link DaoManager} with the help of the
- * {@link OrmLiteSqliteOpenHelper#OrmLiteSqliteOpenHelper(android.content.Context, String, android.database.sqlite.SQLiteDatabase.CursorFactory, int, int)}
+ * {@link OrmLiteSqliteOpenHelper#OrmLiteSqliteOpenHelper(Context, String, SQLiteDatabase.CursorFactory, int, int)}
  * constructor. This means that you can configure your classes _without_ any runtime calls to annotations. It seems
  * significantly faster.
  * <p>

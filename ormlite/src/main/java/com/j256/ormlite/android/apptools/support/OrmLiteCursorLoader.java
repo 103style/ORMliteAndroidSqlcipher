@@ -4,9 +4,9 @@ import static com.j256.ormlite.stmt.StatementBuilder.StatementType.SELECT;
 
 import java.sql.SQLException;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v4.content.AsyncTaskLoader;
 
 import com.j256.ormlite.android.AndroidCompiledStatement;
 import com.j256.ormlite.dao.Dao;

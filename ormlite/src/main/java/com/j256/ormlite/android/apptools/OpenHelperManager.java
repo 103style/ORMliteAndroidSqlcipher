@@ -6,7 +6,7 @@ import java.lang.reflect.Type;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.database.sqlite.SQLiteOpenHelper;
+import net.sqlcipher.database.SQLiteOpenHelper;
 
 import com.j256.ormlite.dao.BaseDaoImpl;
 import com.j256.ormlite.dao.DaoManager;

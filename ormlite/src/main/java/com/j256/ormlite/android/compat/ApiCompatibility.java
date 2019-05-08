@@ -1,7 +1,7 @@
 package com.j256.ormlite.android.compat;
 
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import net.sqlcipher.database.SQLiteDatabase;
 
 /**
  * Compatibility interface to support various different versions of the Android API.
