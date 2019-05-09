@@ -918,7 +918,7 @@ public abstract class BaseDaoImpl<T, ID> implements Dao<T, ID> {
 			 */
 			synchronized (this) {
 				if (daoObserverMap == null) {
-					daoObserverMap = new ConcurrentHashMap<Dao.DaoObserver, Object>();
+					daoObserverMap = new ConcurrentHashMap<DaoObserver, Object>();
 				}
 			}
 		}

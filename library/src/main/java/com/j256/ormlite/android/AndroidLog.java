@@ -57,7 +57,7 @@ public class AndroidLog implements com.j256.ormlite.logger.Log {
 		}
 		// find the maximum level value
 		int maxLevel = 0;
-		for (com.j256.ormlite.logger.Log.Level level : com.j256.ormlite.logger.Log.Level.values()) {
+		for (Level level : Level.values()) {
 			int androidLevel = levelToAndroidLevel(level);
 			if (androidLevel > maxLevel) {
 				maxLevel = androidLevel;
@@ -137,7 +137,7 @@ public class AndroidLog implements com.j256.ormlite.logger.Log {
 	}
 
 	private void refreshLevelCache() {
-		for (com.j256.ormlite.logger.Log.Level level : com.j256.ormlite.logger.Log.Level.values()) {
+		for (Level level : Level.values()) {
 			int androidLevel = levelToAndroidLevel(level);
 			if (androidLevel < levelCache.length) {
 				levelCache[androidLevel] = isLevelEnabledInternal(androidLevel);
@@ -150,7 +150,7 @@ public class AndroidLog implements com.j256.ormlite.logger.Log {
 		return Log.isLoggable(className, androidLevel) || Log.isLoggable(ALL_LOGS_NAME, androidLevel);
 	}
 
-	private int levelToAndroidLevel(com.j256.ormlite.logger.Log.Level level) {
+	private int levelToAndroidLevel(Level level) {
 		switch (level) {
 			case TRACE :
 				return Log.VERBOSE;
