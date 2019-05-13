@@ -1,4 +1,4 @@
-package com.j256.ormlite.android;
+package com.j256.ormlite;
 
 /**
  * created by 103style  2019/5/8 22:25
