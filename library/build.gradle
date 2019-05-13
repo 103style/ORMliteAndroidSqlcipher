@@ -18,7 +18,12 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
-    
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 
     // 统一
     compileOptions {
