@@ -16,11 +16,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs','../ormlitesqlcipher/libs'
+        }
+    }
+
+    // 统一
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
-
-//    implementation 'com.github.103style:ORMliteAndroidSqlcipher:0.0.4'
+    implementation project(':ormlitesqlcipher')
 }

@@ -5,7 +5,10 @@ package com.j256.ormlite.android;
  */
 public class OrmLiteConfigs {
 
-    private static String secret;
+    /**
+     * 配置你的数据库密码
+     */
+    private static String secret = "update_your_secret";
 
     public static String getSecret() {
         return secret;

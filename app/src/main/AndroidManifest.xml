@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".hellonohelper.HelloNoHelper" />
+        <activity android:name=".clickcounter.CreateCounter" />
+        <activity android:name=".clickcounter.ClickConfig" />
+        <activity android:name=".clickcounter.CounterScreen" />
+        <activity android:name=".helloandroid.HelloAndroid" />
+        <activity android:name=".hellonobase.HelloNoBase" />
+        <activity android:name=".hellotwodbs.HelloTwoDbs" />
+        <activity android:name=".notifyservice.MyActivity" />
+        <activity android:name=".notifyservice.ThingActivity" />
     </application>
 
 </manifest>

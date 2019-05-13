@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
+    <Button
+        android:id="@+id/bt_hello_android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="HelloAndroid" />
+
+    <Button
+        android:id="@+id/bt_hello_no_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HelloNoBase" />
+
+    <Button
+        android:id="@+id/bt_hello_two_dbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HelloTwoDbs" />
+
+
+    <Button
+        android:id="@+id/bt_hello_no_helper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HelloNoHelper" />
+
+    <Button
+        android:id="@+id/bt_create_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CreateCounter" />
+
+    <Button
+        android:id="@+id/bt_counter_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CounterScreen" />
+
+    <Button
+        android:id="@+id/bt_click_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ClickConfig" />
+
+    <Button
+        android:id="@+id/bt_my_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyActivity" />
+
+    <Button
+        android:id="@+id/bt_thing_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ThingActivity" />
 
 </LinearLayout>
