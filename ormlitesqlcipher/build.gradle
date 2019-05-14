@@ -38,6 +38,8 @@ dependencies {
     api(name: "android-database-sqlcipher-4.1.3", ext: 'aar')
 }
 
+
+//https://blog.csdn.net/zhcswlp0625/article/details/54895584
 /** 以下开始是将Android Library上传到jcenter的相关配置**/
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
@@ -48,11 +50,13 @@ def siteUrl = 'https://github.com/103style/ORMliteAndroidSqlcipher'    // projec
 def gitUrl = 'https://github.com/103style/ORMliteAndroidSqlcipher.git' // project git
 
 //发布到组织名称名字，必须填写
-group = "com.j256.ormlite"
+group = "com.github.103style"
 //发布到JCenter上的项目名字，必须填写
 def libName = "ormlitesqlcipher"
 //描述
 def libDes = "safe ormlite"
+
+def username = "103style"
 // 版本号，下次更新是只需要更改版本号即可
 version = "0.0.1"
 
@@ -69,7 +73,7 @@ task javadoc(type: Javadoc) {
     options.charSet 'UTF-8'
     options.author true
     options.version true
-    options.links "https://github.com/linglongxin24/FastDev/tree/master/mylibrary/docs/javadoc"
+    options.links siteUrl + "/tree/master/" + libName + "/docs/javadoc"
     failOnError false
 }
 
@@ -97,19 +101,19 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'This is a lightweight SQLite database framework'
+                name libDes
                 url siteUrl
                 licenses {
                     license {
-                        name 'This is a lightweight SQLite database framework'
-                        url 'https://github.com/linglongxin24/SQLite'
+                        name libDes
+                        url siteUrl
                     }
                 }
                 developers {
                     developer {
-                        id 'linglongxin24'
-                        name 'dylan'
-                        email 'linglongxin24@163.com'
+                        id username
+                        name username
+                        email username
                     }
                 }
                 scm {
