@@ -72,7 +72,7 @@ public class AndroidConnectionSource extends BaseConnectionSource implements Con
             SQLiteDatabase db;
             if (sqliteDatabase == null) {
                 try {
-                    db = helper.getWritableDatabase(OrmLiteConfigs.getSecret());
+                    db = helper.getWritableDatabase(OrmLiteConfigs.getInstance().getSecret());
                 } catch (android.database.SQLException e) {
                     throw SqlExceptionUtil.create("Getting a writable database from helper " + helper + " failed", e);
                 }

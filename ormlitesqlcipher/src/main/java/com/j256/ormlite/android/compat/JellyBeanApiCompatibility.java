@@ -18,7 +18,7 @@ public class JellyBeanApiCompatibility extends BasicApiCompatibility {
 
     @Override
     public Cursor rawQuery(SQLiteDatabase db, String sql, String[] selectionArgs, CancellationHook cancellationHook) {
-        //删除 可取消查询语句功能
+        //delete cancelable sql query
 //        if (cancellationHook == null) {
         return db.rawQuery(sql, selectionArgs);
 //        } else {

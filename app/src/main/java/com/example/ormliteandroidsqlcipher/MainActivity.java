@@ -13,19 +13,21 @@ import com.example.ormliteandroidsqlcipher.hellonohelper.HelloNoHelper;
 import com.example.ormliteandroidsqlcipher.hellotwodbs.HelloTwoDbs;
 import com.example.ormliteandroidsqlcipher.notifyservice.MyActivity;
 import com.example.ormliteandroidsqlcipher.notifyservice.ThingActivity;
-
-import net.sqlcipher.database.SQLiteDatabase;
+import com.j256.ormlite.OrmLiteConfigs;
 
 /**
  * @author xiaoke.luo@tcl.com 2019/5/13 16:42
  */
 public class MainActivity extends AppCompatActivity {
 
+    private final String DB_PASSWORD = "afsqwqeqw";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SQLiteDatabase.loadLibs(this);
+
+        OrmLiteConfigs.getInstance().init(this, DB_PASSWORD);
 
         findViewById(R.id.bt_hello_android).setOnClickListener(v -> startActivity(HelloAndroid.class));
         findViewById(R.id.bt_hello_no_base).setOnClickListener(v -> startActivity(HelloNoBase.class));
